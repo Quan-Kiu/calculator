@@ -84,7 +84,7 @@ const app = (() => {
   function handleCalculation() {
     var result;
     var number = "";
-    var regex = /[0-9.%e]/;
+    var regex = /[0-9.%]/;
     var calculation;
 
     Array.from(allButton).forEach((button) => {
@@ -93,7 +93,7 @@ const app = (() => {
           showCalculate.innerText += `${button.innerText}`;
         } else {
           if (button.id == "equa") {
-            Array.from(showCalculate.innerText).forEach((letter) => {
+            Array.from(showCalculate.innerText).forEach((letter, index) => {
               if (regex.test(letter)) {
                 if (letter == "%") {
                   number /= 100;
@@ -102,7 +102,9 @@ const app = (() => {
                 }
               } else {
                 calculation = letter;
-                if (!result) {
+                if (calculation == "-" && index == 0) {
+                  number = "-";
+                } else if (!result) {
                   result = parseFloat(number);
                   number = "";
                 } else {
@@ -115,6 +117,7 @@ const app = (() => {
                       result -= parseFloat(number);
                       number = "";
                       break;
+
                     case "x":
                       result *= parseFloat(number);
                       number = "";
