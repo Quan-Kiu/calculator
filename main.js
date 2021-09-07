@@ -7,13 +7,11 @@ const app = (() => {
   const theme = $$(".theme__content i");
   const ui = $(".caculator");
   var time = $(".time");
-  var network = $("#network");
   var battery = $("#battery");
   var date = new Date(),
     hours,
     minutes;
 
-  var signal = new AbortController().signal;
   var batteryPromise = navigator.getBattery();
   var batteryIcon = {
     0: "empty",
@@ -27,10 +25,6 @@ const app = (() => {
 
   handleCalculation();
 
-  // Get/Render Network
-  if (signal.aborted) {
-    network.innerHTML = '<i class="fas fa-sigle"></i>';
-  }
   // Get/Render Battery
   batteryPromise.then((data) => {
     var batteryIconStatus = data.level * 100;
