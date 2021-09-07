@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100vw;
+  height: 100vh;
+  color: #ffffff;
+  background-color: #e8e8e8;
+}
+
+.caculator {
+  width: 30rem;
+  overflow: hidden;
+  -webkit-box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.1);
+  border: 1px solid #000000;
+  background-color: #22252d;
+  border-radius: 2.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.caculator .container {
+  padding: 1rem 2rem;
+}
+
+.caculator .container .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.3rem;
+}
+
+.caculator .container .navbar .time {
+  font-weight: 600;
+}
+
+.caculator .container .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.caculator .container .theme {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1rem;
+}
+
+.caculator .container .theme .theme__content {
+  mix-blend-mode: difference;
+  -webkit-box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.1), -1px -1px 5px rgba(255, 255, 255, 0.1);
+          box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.1), -1px -1px 5px rgba(255, 255, 255, 0.1);
+  font-size: 2rem;
+  background-color: #2a2d37;
+  padding: 0.5rem 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  border-radius: 2rem;
+}
+
+.caculator .container .theme .theme__content i {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.caculator .container .theme .theme__content i.active {
+  opacity: 1;
+}
+
+.caculator .container .screen {
+  height: 16rem;
+  text-align: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  word-break: break-all;
+  overflow: hidden;
+}
+
+.caculator .container .screen #caculation {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.caculator .container .screen #result {
+  font-size: 4rem;
+  font-weight: 600;
+  overflow: auto;
+}
+
+.caculator .container .screen #result::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+.caculator .caculator__action {
+  background-color: #2a2d37;
+  height: 35rem;
+  mix-blend-mode: difference;
+  padding: 2.5rem;
+  border-radius: 3rem 3rem 0 0;
+}
+
+.caculator .caculator__action .list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.caculator .caculator__action .list .item {
+  font-size: 1.8rem;
+  color: #ffffff;
+  text-align: center;
+  background-color: #282b33;
+  border-radius: 0.5rem;
+  padding: 5px;
+  -webkit-box-shadow: 0.5px 0.5px 3px rgba(255, 255, 255, 0.1), -0.5px -0.5px 10px rgba(255, 255, 255, 0.1);
+          box-shadow: 0.5px 0.5px 3px rgba(255, 255, 255, 0.1), -0.5px -0.5px 10px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.caculator .caculator__action .list .item.dark-green {
+  color: #49edd1;
+}
+
+.caculator .caculator__action .list .item.caculation {
+  color: #e46766;
+}
+
+.caculator .caculator__action hr {
+  width: 10rem;
+  height: 0.2rem;
+  opacity: 0.5;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
+/*# sourceMappingURL=style.css.map */

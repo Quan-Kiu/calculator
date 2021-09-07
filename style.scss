@@ -1,0 +1,134 @@
+@import "./vailiable.scss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: $font-family;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  color: $white-clr;
+  background-color: #e8e8e8;
+}
+
+.caculator {
+  width: 30rem;
+  overflow: hidden;
+  box-shadow: 1rem 1rem 0.5rem rgba(0, 0, 0, 0.1);
+
+  border: 1px solid $black-clr;
+  background-color: $bg-clr-pri;
+  border-radius: 2.5rem;
+  user-select: none;
+  .container {
+    padding: 1rem 2rem;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.3rem;
+      .time {
+        font-weight: 600;
+      }
+    }
+    .theme {
+      justify-content: center;
+      display: flex;
+      margin-top: 1rem;
+      .theme__content {
+        mix-blend-mode: difference;
+        box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.1),
+          -1px -1px 5px rgba(255, 255, 255, 0.1);
+        font-size: 2rem;
+        background-color: $bg-clr-second;
+        padding: 0.5rem 1.5rem;
+        display: flex;
+
+        gap: 2rem;
+        border-radius: 2rem;
+        i {
+          cursor: pointer;
+          opacity: 0.5;
+          &.active {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .screen {
+      height: 16rem;
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      word-break: break-all;
+      overflow: hidden;
+      #caculation {
+        font-size: 2rem;
+        font-weight: 400;
+      }
+      #result {
+        font-size: 4rem;
+        font-weight: 600;
+        overflow: auto;
+        &::-webkit-scrollbar {
+          width: 0.2rem;
+        }
+      }
+    }
+  }
+  .caculator__action {
+    background-color: $bg-clr-second;
+    height: 35rem;
+    mix-blend-mode: difference;
+    padding: 2.5rem;
+    border-radius: 3rem 3rem 0 0;
+    .list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      .item {
+        font-size: 1.8rem;
+        color: $white-clr;
+        text-align: center;
+        background-color: $button-clr;
+        border-radius: 0.5rem;
+        padding: 5px;
+        box-shadow: 0.5px 0.5px 3px rgba(255, 255, 255, 0.1),
+          -0.5px -0.5px 10px rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+        &.dark-green {
+          color: $dark-green-clr;
+        }
+
+        &.caculation {
+          color: $light-red-clr;
+        }
+      }
+    }
+    hr {
+      width: 10rem;
+      height: 0.2rem;
+      opacity: 0.5;
+      margin: 0 auto;
+      margin-top: 3rem;
+    }
+  }
+}

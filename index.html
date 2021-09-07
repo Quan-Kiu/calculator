@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en" class="active">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Project</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="caculator">
+      <div class="container">
+        <nav class="navbar">
+          <div class="time"><span>00:00</span></div>
+          <ul>
+            <li id="network"><i class="fas fa-wifi"></i></li>
+            <li id="battery"></i></li>
+          </ul>
+        </nav>
+
+        <section class="theme">
+          <div class="theme__content">
+            <i id="light" class="far fa-sun"></i>
+            <i id="dark" class="far fa-moon active"></i>
+          </div>
+        </section>
+
+        <section class="screen">
+          <h3 id="caculation"></h3>
+          <h1 id="result">0</h1>
+        </section>
+      </div>
+
+      <section class="caculator__action">
+        <ul class="list">
+          <li class="item dark-green tool" id="ac">AC</li>
+          <li class="item dark-green tool" id="del">DEL</li>
+          <li class="item dark-green" id="percent" value="%">%</li>
+          <li
+            class="item caculation"
+            value="
+          divide"
+          >
+            /
+          </li>
+
+          <li class="item" value="1">1</li>
+          <li class="item" value="2">2</li>
+          <li class="item" value="3">3</li>
+          <li class="item caculation" value="core">x</li>
+          <li class="item" value="4">4</li>
+          <li class="item" value="5">5</li>
+          <li class="item" value="6">6</li>
+          <li class="item caculation" value="minus">-</li>
+          <li class="item" value="7">7</li>
+          <li class="item" value="8">8</li>
+          <li class="item" value="9">9</li>
+          <li class="item caculation" value="plus">+</li>
+          <li class="item tool" id="convert">CV</li>
+          <li class="item" value="0">0</li>
+          <li class="item">.</li>
+          <li class="item dark-green tool caculation" id="equa">=</li>
+        </ul>
+        <hr />
+      </section>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
